@@ -5,7 +5,7 @@
 </div>
 
 ## Unity-NetCDF
-This repository contains some basic C# scripts for reading and displaying NetCDF data in Unity.
+This repository contains some basic C# and Shaderlab scripts for reading and displaying NetCDF data in Unity.
 
 [![Last Commit](https://img.shields.io/github/last-commit/cemac/Unity-NetCDF)](https://github.com/cemac/Unity-NetCDF/commits/main) [![GitHub issues](https://img.shields.io/github/issues/cemac/Unity-NetCDF)](https://github.com/cemac/Unity-NetCDF/issues) [![GitHub top language](https://img.shields.io/github/languages/top/cemac/Unity-NetCDF)](https://github.com/cemac/Unity-NetCDF)
 
