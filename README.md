@@ -7,6 +7,8 @@
 ## Unity-NetCDF
 This repository contains some basic C# scripts for reading and displaying NetCDF data in Unity.
 
+[![GitHub last commit](https://img.shields.io/github/last-commit/cemac/LIFD_DimensionalityReduction.svg)]
+
 ### Available scripts
 - `CreateMesh.cs` - this script contains code to create a number of different simple empty meshes in Unity (ranging from a single triangle to a 3D cube)
 - `VertexColorShader.shader` - this code can be used to create a custom shader in Unity such that an RGB colour is assigned to a vertex based on its position
