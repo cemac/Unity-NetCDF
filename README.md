@@ -12,6 +12,8 @@ This repository contains some basic C# scripts for reading and displaying NetCDF
 - `VertexColorShader.shader` - this code can be used to create a custom shader in Unity such that an RGB colour is assigned to a vertex based on its position
 - `rainbow_cube.cs` - this script contains functions to a) read a NetCDF file in Unity and print statistics to the console and b) create a 3D mesh based on the dimensions of the NetCDF file and assign a semi-random RGB colour to each vertex based on the custom shader 'VertexColorShader.shader'
 
+** Still to come! - a script to read in NetCDF data, extract 3D spatial variable and assign values to mesh vertices in order to visualise meteorological data in Unity **
+
 ### Installing libraries in Unity
 The script `rainbow_cube.cs` uses two third-party libraries used to read NetCDF files using C#. These are:
 - [UCAR's NetCDF-C](https://docs.unidata.ucar.edu/netcdf-c/current/winbin.htmlm)
