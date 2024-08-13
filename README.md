@@ -7,7 +7,7 @@
 ## Unity-NetCDF
 This repository contains some basic C# scripts for reading and displaying NetCDF data in Unity.
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/cemac/LIFD_DimensionalityReduction.svg)]
+![Last Commit](https://img.shields.io/github/last-commit/cemac/Unity-NetCDF)
 
 ### Available scripts
 - `CreateMesh.cs` - this script contains code to create a number of different simple empty meshes in Unity (ranging from a single triangle to a 3D cube)
