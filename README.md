@@ -31,4 +31,4 @@ Download these packages to your Assets/Plugins folder within your Unity project.
 
 Here is a screenshot to show what the output of `rainbow_cube.cs` should look like if successful:
 
-<img src="https://github.com/cemac/Unity-NetCDF/tree/main/images/cube2.png" width="820" height="50" />
+![Rainbow Cube](./images/cube2.png)
