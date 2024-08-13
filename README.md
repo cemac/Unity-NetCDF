@@ -28,3 +28,7 @@ Download these packages to your Assets/Plugins folder within your Unity project.
 - If making use of the custom vertex shader, change the mesh renderer from its default material to the custom material you made earlier
 - During these steps, you will see Unity attempt to compile the code. Check the Project/Console section to see if there are any errors in compilation.
 - If compilation is successful, hit the 'play' button in the Scene to execute the code.
+
+Here is a screenshot to show what the output of `rainbow_cube.cs` should look like if successful:
+
+<img src="https://github.com/cemac/Unity-NetCDF/tree/main/images/cube2.png" width="820" height="50" />
