@@ -13,8 +13,7 @@ This repository contains some basic C# and Shaderlab scripts for reading and dis
 - `CreateMesh.cs` - this script contains code to create a number of different simple empty meshes in Unity (ranging from a single triangle to a 3D cube)
 - `VertexColorShader.shader` - this code can be used to create a custom shader in Unity such that an RGB colour is assigned to a vertex based on its position
 - `rainbow_cube.cs` - this script contains functions to a) read a NetCDF file in Unity and print statistics to the console and b) create a 3D mesh based on the dimensions of the NetCDF file and assign a semi-random RGB colour to each vertex based on the custom shader 'VertexColorShader.shader'
-
-** Still to come! - a script to read in NetCDF data, extract 3D spatial variable and assign values to mesh vertices in order to visualise meteorological data in Unity ** 
+- `Wind_Mesh.csv` - this scripts contains code to read in a remote netcdf file and plot the horizontal wind field onto a 3D mesh (by assigning the data values to the mesh vertex) using the custom vertex shader 'VertexColorShader.shader'
 
 ### Installing libraries in Unity
 The script `rainbow_cube.cs` uses two third-party libraries used to read NetCDF files using C#. These are:
@@ -36,3 +35,7 @@ Download these packages to your Assets/Plugins folder within your Unity project.
 Here is a screenshot to show what the output of `rainbow_cube.cs` should look like if successful:
 
 ![Rainbow Cube](./images/cube2.png)
+
+Here is a screenshot to show what the output of `Wind_Mesh.cs` should look like if successful (blue = negative velocity, red = positive, white = neutral):
+
+![Wind Mesh](./images/windmesh.png)
