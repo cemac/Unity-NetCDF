@@ -10,11 +10,14 @@ Shader "Custom/VertexColorShader"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "Queue" = "Transparent" "RenderType"="Transparent" }
         LOD 100
 
         Pass
         {
+            // Enable blending for transparency
+            Blend SrcAlpha OneMinusSrcAlpha
+            
             Cull Off
             CGPROGRAM
             #pragma vertex vert
