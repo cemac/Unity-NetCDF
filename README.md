@@ -10,13 +10,14 @@ This repository contains some basic C# and Shaderlab scripts for reading and dis
 [![Last Commit](https://img.shields.io/github/last-commit/cemac/Unity-NetCDF)](https://github.com/cemac/Unity-NetCDF/commits/main) [![GitHub issues](https://img.shields.io/github/issues/cemac/Unity-NetCDF)](https://github.com/cemac/Unity-NetCDF/issues) [![GitHub top language](https://img.shields.io/github/languages/top/cemac/Unity-NetCDF)](https://github.com/cemac/Unity-NetCDF)
 
 ### Available scripts
-- `CreateMesh.cs` - this script contains code to create a number of different simple empty meshes in Unity (ranging from a single triangle to a 3D cube)
-- `VertexColorShader.shader` - this code can be used to create a custom shader in Unity such that an RGB colour is assigned to a vertex based on its position
-- `rainbow_cube.cs` - this script contains functions to a) read a NetCDF file in Unity and print statistics to the console and b) create a 3D mesh based on the dimensions of the NetCDF file and assign a semi-random RGB colour to each vertex based on the custom shader 'VertexColorShader.shader'
-- `Wind_Mesh.csv` - this scripts contains code to read in a remote netcdf file and plot the horizontal wind field onto a 3D mesh (by assigning the data values to the mesh vertex) using the custom vertex shader 'VertexColorShader.shader'
+- `CreateMesh.cs` - contains code for generating a variety of simple empty meshes in Unity (ranging from a single triangle to a 3D cube)
+- `VertexColorShader.shader` - can be used to create a custom shader in Unity such that an RGBA colour is assigned to a vertex based on its position within a mesh
+- `rainbow_cube.cs` - contains functions to read a NetCDF file in Unity and print statistics to the console, then construct a 3D mesh based on the file dimensions and assign a semi-random RGBA colour to each vertex based on the custom shader 'VertexColorShader.shader'
+- `Wind_Mesh.cs` - contains code to read in a remote NetCDF file and plot the horizontal wind field onto a 3D mesh (by assigning the data values to the mesh vertex) using the custom vertex shader 'VertexColorShader.shader'
+- 'netcdf_mesh_updates.cs' - contains code to read in a local NetCDF file (user must provide their own), construct a 3D mesh and plot data onto it. This script contains functionality to move forward and backward in time using the keyboard arrow keys. This script was developed using cloud fraction data from a WRF file but can be modified for other types of data.
 
 ### Installing libraries in Unity
-The script `rainbow_cube.cs` uses two third-party libraries used to read NetCDF files using C#. These are:
+Most of these scripts use third-party libraries to read NetCDF files using C#. These are:
 - [UCAR's NetCDF-C](https://docs.unidata.ucar.edu/netcdf-c/current/winbin.htmlm)
 - [nuget's SDSLite](https://www.nuget.org/packages/SDSLite) (dependent on NetCDF-C)
 
