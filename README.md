@@ -18,7 +18,7 @@ This repository contains some basic C# and Shaderlab scripts for reading and dis
 
 ### Installing libraries in Unity
 Most of these scripts use third-party libraries to read NetCDF files using C#. These are:
-- [UCAR's NetCDF-C](https://docs.unidata.ucar.edu/netcdf-c/current/winbin.htmlm)
+- [UCAR's NetCDF-C](https://docs.unidata.ucar.edu/netcdf-c/current/winbin.html)
 - [nuget's SDSLite](https://www.nuget.org/packages/SDSLite) (dependent on NetCDF-C)
 
 Download these packages to your Assets/Plugins folder within your Unity project.
