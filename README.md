@@ -34,6 +34,7 @@ Download these packages to your Assets/Plugins folder within your Unity project.
 - During these steps, you will see Unity attempt to compile the code. Check the Project/Console section to see if there are any errors in compilation.
 - If compilation is successful, hit the 'play' button in the Scene to execute the code.
 
+### Example screenshots
 Here is a screenshot to show what the output of `rainbow_cube.cs` should look like if successful:
 
 ![Rainbow Cube](./images/cube2.png)
@@ -42,6 +43,6 @@ Here is a screenshot to show what the output of `Wind_Mesh.cs` should look like 
 
 ![Wind Mesh](./images/windmesh.png)
 
-Here is a screenshot to show what the output of `netcdf_mesh_update.cs` should look like, showing the cloud fraction (where 0 is transparent and 1 is solid white) from a WRF model output file at a particular time frame:
+Here is a screenshot to show what the output of `netcdf_mesh_update.cs` might look like (it will depend on your file!), showing the cloud fraction (where 0 is transparent and 1 is solid white) from a WRF model output file at a particular time frame:
 
 ![WRF CLDFRA](./images/WRF_cloud.png)
