@@ -14,7 +14,8 @@ This repository contains some basic C# and Shaderlab scripts for reading and dis
 - `VertexColorShader.shader` - can be used to create a custom shader in Unity such that an RGBA colour is assigned to a vertex based on its position within a mesh
 - `rainbow_cube.cs` - contains functions to read a NetCDF file in Unity and print statistics to the console, then construct a 3D mesh based on the file dimensions and assign a semi-random RGBA colour to each vertex based on the custom shader 'VertexColorShader.shader'
 - `Wind_Mesh.cs` - contains code to read in a remote NetCDF file and plot the horizontal wind field onto a 3D mesh (by assigning the data values to the mesh vertex) using the custom vertex shader 'VertexColorShader.shader'
-- `netcdf_mesh_updates.cs` - contains code to read in a local NetCDF file (user must provide their own), construct a 3D mesh and plot data onto it. This script contains functionality to move forward and backward in time using the keyboard arrow keys. This script was developed using cloud fraction data from a WRF file but can be modified for other types of data.
+- `netcdf_mesh_update.cs` - contains code to read in a local NetCDF file (user must provide their own), construct a 3D mesh and plot data onto it. This script contains functionality to move forward and backward in time using the keyboard arrow keys. This script was developed using cloud fraction data from a WRF file but can be modified for other types of data.
+- `MultipleFields/wrf_multi_fields.cs` - contains code similar to `netcdf_mesh_updates.cs` but includes additional 'toggle' functionality to switch between different meteorological fields on-the-fly
 
 ### Installing libraries in Unity
 Most of these scripts use third-party libraries to read NetCDF files using C#. These are:
@@ -40,3 +41,7 @@ Here is a screenshot to show what the output of `rainbow_cube.cs` should look li
 Here is a screenshot to show what the output of `Wind_Mesh.cs` should look like if successful (blue = negative velocity, red = positive, white = neutral):
 
 ![Wind Mesh](./images/windmesh.png)
+
+Here is a screenshot to show what the output of `netcdf_mesh_update.cs` should look like, showing the cloud fraction (where 0 is transparent and 1 is solid white) from a WRF model output file at a particular time frame:
+
+![WRF CLDFRA](./images/WRF_cloud.png)
