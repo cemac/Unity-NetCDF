@@ -6,8 +6,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Microsoft.Research.Science.Data;
-using Microsoft.Research.Science.Data.Imperative;
 using System;
 using System.Linq;
 
