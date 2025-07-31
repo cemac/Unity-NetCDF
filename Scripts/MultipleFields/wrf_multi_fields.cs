@@ -1,4 +1,5 @@
-// This script will read in a WRF output file, construct a three dimensional mesh based on the dimensions of the data,
+// This script will read in a WRF output file (downloadable from: https://huggingface.co/datasets/CEMAC/netcdf_test_files/blob/main/wrfout_d01_2005-08-28_000000.nc),
+// construct a three dimensional mesh based on the dimensions of the data,
 // and render different fields onto the mesh based on toggles selected by the user.
 // The script also contains functionality to move forward and backward in time using the arrow keys.
 
@@ -145,8 +146,8 @@ public class wrf_multi_fields : MonoBehaviour
     // Load in netcdf file and extract 4d data array(s)
     void ReadAllData()
     {
-        // Open the dataset - change file path to your own
-        using (DataSet ds = DataSet.Open("C:/Users/lmkk419/wrf_files/wrfout_d01_2005-08-28_000000.nc"))
+        // Open the dataset (downloable from: https://huggingface.co/datasets/CEMAC/netcdf_test_files/blob/main/wrfout_d01_2005-08-28_000000.nc)
+        using (DataSet ds = DataSet.Open("/path/to/data/wrfout_d01_2005-08-28_000000.nc"))
         {
             // Extract 4D cloud fraction array
             cldfra_4d = ds.GetData<float[,,,]>("CLDFRA");
