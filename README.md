@@ -19,7 +19,7 @@ Download Unity Hub from the [official Unity website](https://unity.com/download)
 | `CreateMesh.cs` | contains code for generating a variety of simple empty meshes in Unity (ranging from a single triangle to a 3D cube) | N | N |
 | `rainbow_cube.cs` |  contains a function to construct a 3D mesh based on user-defined dimensions, and assign a semi-random RGBA colour to each vertex | N | Y |
 | `Wind_Mesh.cs` | contains code to read in a remote NetCDF file and plot the horizontal wind field onto a 3D mesh (by assigning the data values to the mesh vertex) | Y | Y |
-| `netcdf_mesh_update.cs` | contains code to read in a local NetCDF file (user must provide their own), construct a 3D mesh and plot data onto it. This script contains functionality to move forward and backward in time using the keyboard arrow keys. This script was developed using cloud fraction data from a WRF file but can be modified for other types of data. | Y | Y |
+| `netcdf_mesh_update.cs` | contains code to read in an example WRF NetCDF file (downloable from: https://huggingface.co/datasets/CEMAC/netcdf_test_files/blob/main/wrfout_d01_2017-04-19_010000.nc), construct a 3D mesh and plot data onto it. This script contains functionality to move forward and backward in time using the keyboard arrow keys. This script was developed using cloud fraction data from a WRF file but can be modified for other types of data. | Y | Y |
 | `MultipleFields/wrf_multi_fields.cs` | contains code similar to `netcdf_mesh_updates.cs` but includes additional 'toggle' functionality to switch between different meteorological fields on-the-fly | Y | Y |
 
 ### 3. If your script requires NetCDF libraries, here's how you install those (using Windows)
