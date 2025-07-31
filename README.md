@@ -12,7 +12,7 @@ This repository contains some basic C# and Shaderlab scripts for reading and dis
 ### 1. How to install Unity
 Download Unity Hub from the [official Unity website](https://unity.com/download). It is available as a download for Windows, Mac and Linux. Select a version of the Unity Editor (the most recent is fine). Start a new project from the Unity Hub by clicking 'New project' and selecting 3D (Built-In Render Pipeline or Universal 3D.
 
-### 2. Choose the script you would like to use
+### 2. Choose the script you would like to use (inside 'Scripts' folder)
 
 | Script Name | Description | NetCDF library required? | Custom shader required? |
 | ----------- | ----------- | ------------------------ | ----------------------- |
