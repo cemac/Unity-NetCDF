@@ -1,7 +1,7 @@
 // This script contains the following functions:
-// 1. "ReadData": Read in a WRF file and extract a 4D cloud fraction array.
-// 2. "Get3Ddata": Extract a 3D array from the 4D array based on the current time frame.
-// Extracts cloud fraction as a 4D array and remove the time dimension to create a 3d array.
+// 1. "ReadData": Read in a WRF file (download from HuggingFace prior to running: 
+// https://huggingface.co/datasets/CEMAC/netcdf_test_files/blob/main/wrfout_d01_2017-04-19_010000.nc) and extract a 4D cloud fraction array.
+// 2. "Get3Ddata": Extracts a 3D array of cloud fraction from the 4D array based on the current time frame.
 // 3. "GenerateMesh": Create a 3D mesh with the same dimensions as the 3d array from our 
 // file.
 // 4. "AssignColours": Assign colours to the mesh based on the cloud fraction values.
@@ -89,11 +89,12 @@ public class netcdf_mesh_update : MonoBehaviour
         }
     }
 
-    // Load in netcdf file and extract 4d cloud fraction array
+    // Load in a netcdf file and extract 4d cloud fraction array
     void ReadData()
     {
-        // Open the dataset - change file path to your own
-        using (DataSet ds = DataSet.Open("C:/Users/lmkk419/wrf_files/wrfout_d01_2005-08-28_000000.nc"))
+        // Download the example WRF dataset: https://huggingface.co/datasets/CEMAC/netcdf_test_files/blob/main/wrfout_d01_2017-04-19_010000.nc
+        // Open the dataset (change file path to your own)
+        using (DataSet ds = DataSet.Open("/path/to/file/wrfout_d01_2005-08-28_000000.nc"))
         {
             // Extract 4D cloud fraction array
             cldfra_4d = ds.GetData<float[,,,]>("CLDFRA");
