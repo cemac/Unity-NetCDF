@@ -6,4 +6,4 @@
 4. Assign the script 'pointCloud.cs' to the object
 5. Run the scene. You should be able to change the aesthetics of the point cloud using the slides in the Inspector panel:
 
-   ![PointCloud](../images/point_cloud.png)
+   ![PointCloud](../../images/point_cloud.png)
