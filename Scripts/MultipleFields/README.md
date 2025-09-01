@@ -11,3 +11,6 @@
 
 5. Create a new game object in the Hierarchy panel (in our example, this is called `readnetcdf`) and add a mesh filter and mesh renderer. As in previous examples, changes the mesh renderer from its default material to the custom RGB material. Then add the script `wrf_multi_fields.cs` to the object. Because we included `[SerializeField] private ToggleGroup toggleGroup;` in the script, when you click on the Inspector you should now see 'ToggleGroup' as an option to set. Select 'toggleGroup'. Remember to assign the custom vertex shader/material as in previous examples. <br />
 ![set_toggle_group](../../images/MultipleFields/set_toggle_group.png)
+
+6. When you hit 'play', the final thing should look something like this: <br />
+![unity_ui](../../images/MultipleFields/unity_ui.png)
