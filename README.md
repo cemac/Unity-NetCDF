@@ -4,24 +4,27 @@
   <br>
 </div>
 
-## Unity-NetCDF
+## Visualising NetCDF data in the Unity game engine
+Many earth system models produce output files in NetCDF format, a popular filetype for holding array-oriented scientific data. Unity is a cross-platform gaming engine which is able to represent objects in three-dimensional and extended reality (xR) environments. CEMAC have explored Unity's capability to ingest and display NetCDF data so that it may be interacted with in an xR environment. Our focus has been on uniform gridded data, which can be represented in Unity using a mesh object. A mesh is constructed from a number of vertices and multiple triangle arrays. Vertices are a collection of positions with optional additional attributes, one of which is colour; therefore we can use a C# script (Unity's scripting language) to assign an environmental value - such as pressure or temperature - to a vertex using the colour attribute, and visualise those colours using a shader script.
+
 This repository contains some basic C# and Shaderlab scripts for reading and displaying NetCDF data in Unity.
 
 [![Last Commit](https://img.shields.io/github/last-commit/cemac/Unity-NetCDF)](https://github.com/cemac/Unity-NetCDF/commits/main) [![GitHub issues](https://img.shields.io/github/issues/cemac/Unity-NetCDF)](https://github.com/cemac/Unity-NetCDF/issues) [![GitHub top language](https://img.shields.io/github/languages/top/cemac/Unity-NetCDF)](https://github.com/cemac/Unity-NetCDF)
 
 ### 1. How to install Unity
-Download Unity Hub from the [official Unity website](https://unity.com/download). It is available as a download for Windows, Mac and Linux. Select a version of the Unity Editor (the most recent is fine). Start a new project from the Unity Hub by clicking 'New project' and selecting 3D (Built-In Render Pipeline or Universal 3D.
+Download Unity Hub from the [official Unity website](https://unity.com/download) which is available for Windows, Mac and Linux. Select a version of the Unity Editor (the most recent is fine). Once it's installed, start a new project from Unity Hub by clicking 'New project' and selecting 3D (Built-In Render Pipeline) or Universal 3D.
 
-### 2. Choose the script you would like to use (inside 'Scripts' folder in this repository)
+### 2. Clone this repository
+The following table lists the C# scripts in this repository (inside the 'Scripts' folder) and gives a brief overview of its functionality.
 
 | Script Name | Description | NetCDF library required? | Custom shader |
 | ----------- | ----------- | ------------------------ | ----------------------- |
-| `CreateMesh.cs` | contains code for generating a variety of simple empty meshes in Unity (ranging from a single triangle to a 3D cube) | N | N/A |
-| `rainbow_cube.cs` |  contains a function to construct a 3D mesh based on user-defined dimensions, and assign a semi-random RGBA colour to each vertex | N | Shaders/VertexColorShader.shader |
-| `Wind_Mesh.cs` | contains code to read in a remote NetCDF file and plot the horizontal wind field onto a 3D mesh (by assigning the data values to the mesh vertex) | Y | Shaders/VertexColorShader.shader |
-| `netcdf_mesh_update.cs` | contains code to read in an example WRF NetCDF file (downloadable from: https://huggingface.co/datasets/CEMAC/netcdf_test_files/blob/main/wrfout_d01_2005-08-28_000000.nc), construct a 3D mesh and plot data onto it. This script contains functionality to move forward and backward in time using the keyboard arrow keys. This script was developed using cloud fraction data from a WRF file but can be modified for other types of data. | Y | Shaders/VertexColorShader.shader |
-| `MultipleFields/wrf_multi_fields.cs` | contains code similar to `netcdf_mesh_updates.cs` but includes additional 'toggle' functionality to switch between different meteorological fields on-the-fly | Y | Shaders/VertexColorShader.shader |
-| `PointCloud/pointCloud.cs` | contains code to display a 2x2x2 mesh with coloured vertices (no interpolated shading) and functionality to modify the vertex attributes once displayed| N | Shaders/pointCloud.shader |
+| `CreateMesh.cs` | Contains code for generating a variety of simple empty meshes in Unity (ranging from a single triangle to a 3D cube) | N | N/A |
+| `rainbow_cube.cs` |  Contains a function to construct a 3D mesh based on user-defined dimensions, and assign a semi-random RGBA colour to each vertex | N | Shaders/VertexColorShader.shader |
+| `Wind_Mesh.cs` | Contains code to read in a remote NetCDF file and plot the horizontal wind field onto a 3D mesh (by assigning the data values to the mesh vertex) | Y | Shaders/VertexColorShader.shader |
+| `netcdf_mesh_update.cs` | Contains code to read in an example WRF NetCDF file (downloadable from: https://huggingface.co/datasets/CEMAC/netcdf_test_files/blob/main/wrfout_d01_2005-08-28_000000.nc), construct a 3D mesh and plot data onto it. This script contains functionality to move forward and backward in time using the keyboard arrow keys. This script was developed using cloud fraction data from a WRF file but can be modified for other types of data. | Y | Shaders/VertexColorShader.shader |
+| `MultipleFields/wrf_multi_fields.cs` | Contains code similar to `netcdf_mesh_updates.cs` but includes additional 'toggle' functionality to switch between different meteorological fields on-the-fly | Y | Shaders/VertexColorShader.shader |
+| `PointCloud/pointCloud.cs` | Contains code to display a 2x2x2 mesh with coloured vertices (no interpolated shading) and functionality to modify the vertex attributes once displayed| N | Shaders/pointCloud.shader |
 
 ### 3. If your script requires NetCDF libraries, here's how you install those (using Windows)
 Most of these scripts use third-party libraries to read NetCDF files using C#. These are:
