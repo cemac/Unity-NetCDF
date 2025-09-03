@@ -17,11 +17,11 @@ Download Unity Hub from the [official Unity website](https://unity.com/download)
 | Script Name | Description | NetCDF library required? | Custom shader |
 | ----------- | ----------- | ------------------------ | ----------------------- |
 | `CreateMesh.cs` | contains code for generating a variety of simple empty meshes in Unity (ranging from a single triangle to a 3D cube) | N | N/A |
-| `rainbow_cube.cs` |  contains a function to construct a 3D mesh based on user-defined dimensions, and assign a semi-random RGBA colour to each vertex | N | VertexColorShader.shader |
-| `Wind_Mesh.cs` | contains code to read in a remote NetCDF file and plot the horizontal wind field onto a 3D mesh (by assigning the data values to the mesh vertex) | Y | VertexColorShader.shader |
-| `netcdf_mesh_update.cs` | contains code to read in an example WRF NetCDF file (downloadable from: https://huggingface.co/datasets/CEMAC/netcdf_test_files/blob/main/wrfout_d01_2005-08-28_000000.nc), construct a 3D mesh and plot data onto it. This script contains functionality to move forward and backward in time using the keyboard arrow keys. This script was developed using cloud fraction data from a WRF file but can be modified for other types of data. | Y | VertexColorShader.shader |
-| `MultipleFields/wrf_multi_fields.cs` | contains code similar to `netcdf_mesh_updates.cs` but includes additional 'toggle' functionality to switch between different meteorological fields on-the-fly | Y | VertexColorShader.shader |
-| `PointCloud/pointCloud.cs` | contains code to display a 2x2x2 mesh with coloured vertices (no interpolated shading) and functionality to modify the vertex attributes once displayed| N | pointCloud.shader |
+| `rainbow_cube.cs` |  contains a function to construct a 3D mesh based on user-defined dimensions, and assign a semi-random RGBA colour to each vertex | N | Shaders/VertexColorShader.shader |
+| `Wind_Mesh.cs` | contains code to read in a remote NetCDF file and plot the horizontal wind field onto a 3D mesh (by assigning the data values to the mesh vertex) | Y | Shaders/VertexColorShader.shader |
+| `netcdf_mesh_update.cs` | contains code to read in an example WRF NetCDF file (downloadable from: https://huggingface.co/datasets/CEMAC/netcdf_test_files/blob/main/wrfout_d01_2005-08-28_000000.nc), construct a 3D mesh and plot data onto it. This script contains functionality to move forward and backward in time using the keyboard arrow keys. This script was developed using cloud fraction data from a WRF file but can be modified for other types of data. | Y | Shaders/VertexColorShader.shader |
+| `MultipleFields/wrf_multi_fields.cs` | contains code similar to `netcdf_mesh_updates.cs` but includes additional 'toggle' functionality to switch between different meteorological fields on-the-fly | Y | Shaders/VertexColorShader.shader |
+| `PointCloud/pointCloud.cs` | contains code to display a 2x2x2 mesh with coloured vertices (no interpolated shading) and functionality to modify the vertex attributes once displayed| N | Shaders/pointCloud.shader |
 
 ### 3. If your script requires NetCDF libraries, here's how you install those (using Windows)
 Most of these scripts use third-party libraries to read NetCDF files using C#. These are:
